@@ -4,3 +4,10 @@
 <% @doctors.all.each do |doctor| %>
   <p><%= link_to doctor.name, doctor_path(doctor) %> - <%= doctor.patients.count%></p>
 <% end %>
+
+
+doctor = name:string, department:string
+patient = name:string age:integer
+appointment = datetime:appointment_datetime, patient_id:integer, doctor_id:integer
+
+rails g resource Account name:string payment_status:string --no-test-framework
